@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PhiDeltZips.Models.Season>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SeasonYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeasonChamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeasonRunnerUp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeasonRegChamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeasonRegRunnerUp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalTrades)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeasonYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeasonChamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeasonRunnerUp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeasonRegChamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeasonRegRunnerUp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalTrades)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SeasonID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SeasonID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SeasonID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,357 @@
+﻿@model IEnumerable<PhiDeltZips.Models.Player>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2010Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2010Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2010Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2010Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2010Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2010Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2011Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2011Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2011Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2011Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2011Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2011Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2012Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2012Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2012Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2012Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2012Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2012Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2013Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2013Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2013Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2013Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2013Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2013Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2014Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2014Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2014Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2014Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2014Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2014Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2015Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2015Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2015Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2015Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2015Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2015Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2016Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2016Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2016Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2016Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2016Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2016Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2017Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2017Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2017Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2017Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2017Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2017Finish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2018Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2018Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2018Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2018Ties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2018Trades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y2018Finish)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2010Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2010Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2010Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2010Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2010Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2010Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2011Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2011Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2011Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2011Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2011Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2011Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2012Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2012Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2012Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2012Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2012Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2012Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2013Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2013Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2013Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2013Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2013Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2013Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2014Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2014Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2014Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2014Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2014Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2014Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2015Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2015Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2015Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2015Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2015Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2015Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2016Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2016Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2016Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2016Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2016Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2016Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2017Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2017Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2017Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2017Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2017Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2017Finish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2018Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2018Wins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2018Losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2018Ties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2018Trades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y2018Finish)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlayerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlayerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlayerID })
+        </td>
+    </tr>
+}
+
+</table>

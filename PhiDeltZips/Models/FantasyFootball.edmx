@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PhiDeltZipsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Y2010Points" Type="int" />
+          <Property Name="Y2010Wins" Type="int" />
+          <Property Name="Y2010Losses" Type="int" />
+          <Property Name="Y2010Ties" Type="int" />
+          <Property Name="Y2010Trades" Type="int" />
+          <Property Name="Y2010Finish" Type="int" />
+          <Property Name="Y2011Points" Type="int" />
+          <Property Name="Y2011Wins" Type="int" />
+          <Property Name="Y2011Losses" Type="int" />
+          <Property Name="Y2011Ties" Type="int" />
+          <Property Name="Y2011Trades" Type="int" />
+          <Property Name="Y2011Finish" Type="int" />
+          <Property Name="Y2012Points" Type="int" />
+          <Property Name="Y2012Wins" Type="int" />
+          <Property Name="Y2012Losses" Type="int" />
+          <Property Name="Y2012Ties" Type="int" />
+          <Property Name="Y2012Trades" Type="int" />
+          <Property Name="Y2012Finish" Type="int" />
+          <Property Name="Y2013Points" Type="int" />
+          <Property Name="Y2013Wins" Type="int" />
+          <Property Name="Y2013Losses" Type="int" />
+          <Property Name="Y2013Ties" Type="int" />
+          <Property Name="Y2013Trades" Type="int" />
+          <Property Name="Y2013Finish" Type="int" />
+          <Property Name="Y2014Points" Type="int" />
+          <Property Name="Y2014Wins" Type="int" />
+          <Property Name="Y2014Losses" Type="int" />
+          <Property Name="Y2014Ties" Type="int" />
+          <Property Name="Y2014Trades" Type="int" />
+          <Property Name="Y2014Finish" Type="int" />
+          <Property Name="Y2015Points" Type="int" />
+          <Property Name="Y2015Wins" Type="int" />
+          <Property Name="Y2015Losses" Type="int" />
+          <Property Name="Y2015Ties" Type="int" />
+          <Property Name="Y2015Trades" Type="int" />
+          <Property Name="Y2015Finish" Type="int" />
+          <Property Name="Y2016Points" Type="int" />
+          <Property Name="Y2016Wins" Type="int" />
+          <Property Name="Y2016Losses" Type="int" />
+          <Property Name="Y2016Ties" Type="int" />
+          <Property Name="Y2016Trades" Type="int" />
+          <Property Name="Y2016Finish" Type="int" />
+          <Property Name="Y2017Points" Type="int" />
+          <Property Name="Y2017Wins" Type="int" />
+          <Property Name="Y2017Losses" Type="int" />
+          <Property Name="Y2017Ties" Type="int" />
+          <Property Name="Y2017Trades" Type="int" />
+          <Property Name="Y2017Finish" Type="int" />
+          <Property Name="Y2018Points" Type="int" />
+          <Property Name="Y2018Wins" Type="int" />
+          <Property Name="Y2018Losses" Type="int" />
+          <Property Name="Y2018Ties" Type="int" />
+          <Property Name="Y2018Trades" Type="int" />
+          <Property Name="Y2018Finish" Type="int" />
+        </EntityType>
+        <EntityType Name="Seasons">
+          <Key>
+            <PropertyRef Name="SeasonID" />
+          </Key>
+          <Property Name="SeasonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SeasonYear" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="SeasonChamp" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SeasonRunnerUp" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SeasonRegChamp" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SeasonRegRunnerUp" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TotalPoints" Type="int" Nullable="false" />
+          <Property Name="TotalTrades" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityContainer Name="PhiDeltZipsModelStoreContainer">
+          <EntitySet Name="Players" EntityType="Self.Players" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seasons" EntityType="Self.Seasons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PhiDeltZipsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Y2010Points" Type="Int32" />
+          <Property Name="Y2010Wins" Type="Int32" />
+          <Property Name="Y2010Losses" Type="Int32" />
+          <Property Name="Y2010Ties" Type="Int32" />
+          <Property Name="Y2010Trades" Type="Int32" />
+          <Property Name="Y2010Finish" Type="Int32" />
+          <Property Name="Y2011Points" Type="Int32" />
+          <Property Name="Y2011Wins" Type="Int32" />
+          <Property Name="Y2011Losses" Type="Int32" />
+          <Property Name="Y2011Ties" Type="Int32" />
+          <Property Name="Y2011Trades" Type="Int32" />
+          <Property Name="Y2011Finish" Type="Int32" />
+          <Property Name="Y2012Points" Type="Int32" />
+          <Property Name="Y2012Wins" Type="Int32" />
+          <Property Name="Y2012Losses" Type="Int32" />
+          <Property Name="Y2012Ties" Type="Int32" />
+          <Property Name="Y2012Trades" Type="Int32" />
+          <Property Name="Y2012Finish" Type="Int32" />
+          <Property Name="Y2013Points" Type="Int32" />
+          <Property Name="Y2013Wins" Type="Int32" />
+          <Property Name="Y2013Losses" Type="Int32" />
+          <Property Name="Y2013Ties" Type="Int32" />
+          <Property Name="Y2013Trades" Type="Int32" />
+          <Property Name="Y2013Finish" Type="Int32" />
+          <Property Name="Y2014Points" Type="Int32" />
+          <Property Name="Y2014Wins" Type="Int32" />
+          <Property Name="Y2014Losses" Type="Int32" />
+          <Property Name="Y2014Ties" Type="Int32" />
+          <Property Name="Y2014Trades" Type="Int32" />
+          <Property Name="Y2014Finish" Type="Int32" />
+          <Property Name="Y2015Points" Type="Int32" />
+          <Property Name="Y2015Wins" Type="Int32" />
+          <Property Name="Y2015Losses" Type="Int32" />
+          <Property Name="Y2015Ties" Type="Int32" />
+          <Property Name="Y2015Trades" Type="Int32" />
+          <Property Name="Y2015Finish" Type="Int32" />
+          <Property Name="Y2016Points" Type="Int32" />
+          <Property Name="Y2016Wins" Type="Int32" />
+          <Property Name="Y2016Losses" Type="Int32" />
+          <Property Name="Y2016Ties" Type="Int32" />
+          <Property Name="Y2016Trades" Type="Int32" />
+          <Property Name="Y2016Finish" Type="Int32" />
+          <Property Name="Y2017Points" Type="Int32" />
+          <Property Name="Y2017Wins" Type="Int32" />
+          <Property Name="Y2017Losses" Type="Int32" />
+          <Property Name="Y2017Ties" Type="Int32" />
+          <Property Name="Y2017Trades" Type="Int32" />
+          <Property Name="Y2017Finish" Type="Int32" />
+          <Property Name="Y2018Points" Type="Int32" />
+          <Property Name="Y2018Wins" Type="Int32" />
+          <Property Name="Y2018Losses" Type="Int32" />
+          <Property Name="Y2018Ties" Type="Int32" />
+          <Property Name="Y2018Trades" Type="Int32" />
+          <Property Name="Y2018Finish" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Season">
+          <Key>
+            <PropertyRef Name="SeasonID" />
+          </Key>
+          <Property Name="SeasonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SeasonYear" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SeasonChamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SeasonRunnerUp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SeasonRegChamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SeasonRegRunnerUp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TotalPoints" Type="Int32" Nullable="false" />
+          <Property Name="TotalTrades" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="PhiDeltZipsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Players" EntityType="Self.Player" />
+          <EntitySet Name="Seasons" EntityType="Self.Season" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PhiDeltZipsModelStoreContainer" CdmEntityContainer="PhiDeltZipsEntities">
+          <EntitySetMapping Name="Players">
+            <EntityTypeMapping TypeName="PhiDeltZipsModel.Player">
+              <MappingFragment StoreEntitySet="Players">
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+                <ScalarProperty Name="Y2010Points" ColumnName="Y2010Points" />
+                <ScalarProperty Name="Y2010Wins" ColumnName="Y2010Wins" />
+                <ScalarProperty Name="Y2010Losses" ColumnName="Y2010Losses" />
+                <ScalarProperty Name="Y2010Ties" ColumnName="Y2010Ties" />
+                <ScalarProperty Name="Y2010Trades" ColumnName="Y2010Trades" />
+                <ScalarProperty Name="Y2010Finish" ColumnName="Y2010Finish" />
+                <ScalarProperty Name="Y2011Points" ColumnName="Y2011Points" />
+                <ScalarProperty Name="Y2011Wins" ColumnName="Y2011Wins" />
+                <ScalarProperty Name="Y2011Losses" ColumnName="Y2011Losses" />
+                <ScalarProperty Name="Y2011Ties" ColumnName="Y2011Ties" />
+                <ScalarProperty Name="Y2011Trades" ColumnName="Y2011Trades" />
+                <ScalarProperty Name="Y2011Finish" ColumnName="Y2011Finish" />
+                <ScalarProperty Name="Y2012Points" ColumnName="Y2012Points" />
+                <ScalarProperty Name="Y2012Wins" ColumnName="Y2012Wins" />
+                <ScalarProperty Name="Y2012Losses" ColumnName="Y2012Losses" />
+                <ScalarProperty Name="Y2012Ties" ColumnName="Y2012Ties" />
+                <ScalarProperty Name="Y2012Trades" ColumnName="Y2012Trades" />
+                <ScalarProperty Name="Y2012Finish" ColumnName="Y2012Finish" />
+                <ScalarProperty Name="Y2013Points" ColumnName="Y2013Points" />
+                <ScalarProperty Name="Y2013Wins" ColumnName="Y2013Wins" />
+                <ScalarProperty Name="Y2013Losses" ColumnName="Y2013Losses" />
+                <ScalarProperty Name="Y2013Ties" ColumnName="Y2013Ties" />
+                <ScalarProperty Name="Y2013Trades" ColumnName="Y2013Trades" />
+                <ScalarProperty Name="Y2013Finish" ColumnName="Y2013Finish" />
+                <ScalarProperty Name="Y2014Points" ColumnName="Y2014Points" />
+                <ScalarProperty Name="Y2014Wins" ColumnName="Y2014Wins" />
+                <ScalarProperty Name="Y2014Losses" ColumnName="Y2014Losses" />
+                <ScalarProperty Name="Y2014Ties" ColumnName="Y2014Ties" />
+                <ScalarProperty Name="Y2014Trades" ColumnName="Y2014Trades" />
+                <ScalarProperty Name="Y2014Finish" ColumnName="Y2014Finish" />
+                <ScalarProperty Name="Y2015Points" ColumnName="Y2015Points" />
+                <ScalarProperty Name="Y2015Wins" ColumnName="Y2015Wins" />
+                <ScalarProperty Name="Y2015Losses" ColumnName="Y2015Losses" />
+                <ScalarProperty Name="Y2015Ties" ColumnName="Y2015Ties" />
+                <ScalarProperty Name="Y2015Trades" ColumnName="Y2015Trades" />
+                <ScalarProperty Name="Y2015Finish" ColumnName="Y2015Finish" />
+                <ScalarProperty Name="Y2016Points" ColumnName="Y2016Points" />
+                <ScalarProperty Name="Y2016Wins" ColumnName="Y2016Wins" />
+                <ScalarProperty Name="Y2016Losses" ColumnName="Y2016Losses" />
+                <ScalarProperty Name="Y2016Ties" ColumnName="Y2016Ties" />
+                <ScalarProperty Name="Y2016Trades" ColumnName="Y2016Trades" />
+                <ScalarProperty Name="Y2016Finish" ColumnName="Y2016Finish" />
+                <ScalarProperty Name="Y2017Points" ColumnName="Y2017Points" />
+                <ScalarProperty Name="Y2017Wins" ColumnName="Y2017Wins" />
+                <ScalarProperty Name="Y2017Losses" ColumnName="Y2017Losses" />
+                <ScalarProperty Name="Y2017Ties" ColumnName="Y2017Ties" />
+                <ScalarProperty Name="Y2017Trades" ColumnName="Y2017Trades" />
+                <ScalarProperty Name="Y2017Finish" ColumnName="Y2017Finish" />
+                <ScalarProperty Name="Y2018Points" ColumnName="Y2018Points" />
+                <ScalarProperty Name="Y2018Wins" ColumnName="Y2018Wins" />
+                <ScalarProperty Name="Y2018Losses" ColumnName="Y2018Losses" />
+                <ScalarProperty Name="Y2018Ties" ColumnName="Y2018Ties" />
+                <ScalarProperty Name="Y2018Trades" ColumnName="Y2018Trades" />
+                <ScalarProperty Name="Y2018Finish" ColumnName="Y2018Finish" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seasons">
+            <EntityTypeMapping TypeName="PhiDeltZipsModel.Season">
+              <MappingFragment StoreEntitySet="Seasons">
+                <ScalarProperty Name="SeasonID" ColumnName="SeasonID" />
+                <ScalarProperty Name="SeasonYear" ColumnName="SeasonYear" />
+                <ScalarProperty Name="SeasonChamp" ColumnName="SeasonChamp" />
+                <ScalarProperty Name="SeasonRunnerUp" ColumnName="SeasonRunnerUp" />
+                <ScalarProperty Name="SeasonRegChamp" ColumnName="SeasonRegChamp" />
+                <ScalarProperty Name="SeasonRegRunnerUp" ColumnName="SeasonRegRunnerUp" />
+                <ScalarProperty Name="TotalPoints" ColumnName="TotalPoints" />
+                <ScalarProperty Name="TotalTrades" ColumnName="TotalTrades" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="PhiDeltZipsModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
